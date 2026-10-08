@@ -1,25 +1,23 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToyoCamperos - Camilo</title>
+    <link rel="preconnect" href="https://script.google.com">
+    <link rel="preconnect" href="https://script.googleusercontent.com">
     <style>
-        /* Esto hace que el marco ocupe el 100% de la pantalla sin bordes */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden; 
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+        body, html { margin:0; padding:0; height:100%; width:100%; }
+        iframe { width:100%; height:100%; border:none; }
     </style>
 </head>
 <body>
-    <iframe src="https://script.google.com/macros/s/AKfycbxeCATr8-S94LwGkbb-o-nlAjGgyJVzOC2vHJUnIlzJ5CU9oMIQCg983MftAQdC4AVmdQ/exec"></iframe>
+    <script>
+        var scriptUrl = "https://script.google.com/macros/s/AKfycbwO9zoNLYi77WoIVLcN3yFu6yyE8jBHWuseaXrTjj6eG3Dji97OptrekLIHEtyBorcG/exec";
+        var params = window.location.search; // ya trae el "?" si existe
+        if (params) scriptUrl += params;
+        var iframe = document.createElement('iframe');
+        iframe.src = scriptUrl;
+        iframe.setAttribute('allow', 'clipboard-read; clipboard-write');
+        document.body.appendChild(iframe);
+    </script>
 </body>
 </html>
